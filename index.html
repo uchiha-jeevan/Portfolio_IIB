@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Inline script to prevent theme flash (FOUC)
+    {
+      const storedTheme = localStorage.getItem("portfolio-theme");
+      if (storedTheme) {
+        document.documentElement.setAttribute("data-theme", storedTheme);
+        const metaTheme = document.querySelector('meta[name="color-scheme"]');
+        if (metaTheme) metaTheme.content = storedTheme;
+      }
+    }
+  </script>
+
+  <title>Jeevan Reddy K | Software Engineer & Enterprise Integration Specialist</title>
+  <meta name="description" content="Portfolio of Jeevan Reddy K - Software Engineer with 3+ years of experience in IBM App Connect Enterprise (ACE), APIC, Java, Spring Boot, and Enterprise Integration.">
+  <meta name="keywords" content="Jeevan Reddy K, Software Engineer, IBM ACE, APIC, Spring Boot, Java Developer, Splunk, Bangalore, Portfolio">
+  <meta name="author" content="Jeevan Reddy K">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Jeevan Reddy K | Software Engineer & Enterprise Integration Specialist">
+  <meta property="og:description" content="Explore enterprise integration solutions, Java Spring Boot microservices, and observability architectures engineered by Jeevan Reddy K.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/profile.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon (SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2306b6d4'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-size='56' font-weight='900' fill='white'>J</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header & Navigation Bar
+       ======================================================================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Jeevan Reddy K Portfolio">
+        <div class="logo-badge">J</div>
+        <span>Jeevan<span class="brand-accent">.dev</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#credentials" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Resume Download Button -->
+        <a href="Resume/JeevanAC.docx" download="Jeevan_Reddy_K_Resume.docx" class="nav-cta-btn" id="header-resume-btn" title="Download Official Resume">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         Hero Section
+         ======================================================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Introduction -->
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span>Available for Software Engineer & Integration Roles</span>
+            </div>
+
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-title">
+              Jeevan <span class="gradient-text">Reddy K</span>
+            </h1>
+
+            <div class="hero-subtitle">
+              <span>Software Engineer</span>
+              <span class="hero-subtitle-badge">IBM ACE & APIC</span>
+              <span>Java Backend</span>
+            </div>
+
+            <p class="hero-bio">
+              Software Engineer with <strong>3 years of enterprise experience</strong> specializing in 
+              <strong>IBM App Connect Enterprise (ACE)</strong>, <strong>IBM API Connect (APIC)</strong>, and 
+              <strong>Java Spring Boot</strong>. Passionate about building robust, high-availability message flows, 
+              scalable microservices, and maintaining zero-downtime integration pipelines.
+            </p>
+
+            <!-- Meta Contact Highlights -->
+            <div class="hero-meta-items">
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Bangalore, Karnataka, India</span>
+              </div>
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <a href="mailto:jeevankothapallie143@gmail.com">jeevankothapallie143@gmail.com</a>
+              </div>
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <a href="tel:+917671931861">+91 7671931861</a>
+              </div>
+            </div>
+
+            <!-- CTA Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="Resume/JeevanAC.docx" download="Jeevan_Reddy_K_Resume.docx" class="btn btn-primary" id="hero-resume-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Get in Touch</span>
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <span class="social-label">Connect:</span>
+              <div class="social-links">
+                <a href="mailto:jeevankothapallie143@gmail.com" class="social-icon-btn" title="Send Email" aria-label="Email Jeevan Reddy">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Profile Visual Showcase -->
+          <div class="hero-visual-wrapper">
+            <div class="profile-card-container">
+              <!-- Ambient Halo Glow -->
+              <div class="ambient-glow-halo"></div>
+
+              <!-- Profile Image Frame -->
+              <div class="profile-frame">
+                <!-- User Profile Picture: user can swap assets/images/profile.jpg anytime -->
+                <img src="assets/images/profile.jpg" alt="Jeevan Reddy K - Software Engineer" class="profile-image" id="profile-img">
+              </div>
+
+              <!-- Top Floating Badge: Experience -->
+              <div class="floating-badge badge-top-right">
+                <div class="badge-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <div class="badge-title">Enterprise Experience</div>
+                  <div class="badge-value">3+ Years at TCS</div>
+                </div>
+              </div>
+
+              <!-- Bottom Floating Badge: Core Spec -->
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon-box indigo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="badge-title">Specialization</div>
+                  <div class="badge-value">IBM ACE & Spring Boot</div>
+                </div>
+              </div>
+
+              <!-- Photo swap tooltip indicator for the user -->
+              <div class="photo-hint" title="You can easily update your photo by replacing assets/images/profile.jpg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Photo customizable in assets/images/profile.jpg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Key Highlights & Metrics Bar
+         ======================================================================== -->
+    <section class="section metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-number gradient-text" data-counter-target="3" data-counter-suffix="+">3+</div>
+            <div class="metric-label">Years of Experience</div>
+            <div class="metric-subtext">Enterprise Software & Integration</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-number gradient-text" data-counter-target="100" data-counter-suffix="+">100+</div>
+            <div class="metric-label">Integration Flows</div>
+            <div class="metric-subtext">Engineered in IBM ACE & IIB</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-number gradient-text" data-counter-target="99.9" data-counter-suffix="%" data-counter-float="true">99.9%</div>
+            <div class="metric-label">System Reliability</div>
+            <div class="metric-subtext">Splunk Monitoring & Root Cause Fixes</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-number gradient-text" data-counter-target="2" data-counter-suffix=" Key Roles">2 Roles</div>
+            <div class="metric-label">Integration & Java Developer</div>
+            <div class="metric-subtext">Delivered at TCS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         About Section
+         ======================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">About Me</div>
+          <h2 class="section-title">Architecting High-Reliability <span class="gradient-text">Enterprise Integrations</span></h2>
+          <p class="section-description">
+            Bridging disparate corporate architectures into seamless, high-throughput, and resilient systems.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a <strong>Software Engineer based in Bangalore</strong> with over 3 years of hands-on experience 
+              specializing in <strong>IBM App Connect Enterprise (ACE)</strong> and <strong>Java Spring Boot</strong> 
+              application engineering at <strong>Tata Consultancy Services (TCS)</strong>.
+            </p>
+            <p>
+              My focus is delivering end-to-end integration solutions that guarantee high availability, strict 
+              transactional consistency, and low-latency payload routing. Whether transforming complex XML/JSON 
+              data schemas or diagnosing high-severity production bottlenecks through <strong>Splunk</strong> and 
+              <strong>Dynatrace</strong>, I ensure systems operate smoothly under high load.
+            </p>
+
+            <div class="about-highlights-list">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Message Flow Engineering</h4>
+                  <p>Design & optimization of ACE message flows, subflows, and ESQL transformations.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Spring Boot Microservices</h4>
+                  <p>Production-ready REST APIs, clean service layers, and unit test automation.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Real-Time Observability</h4>
+                  <p>Splunk query analysis, Dynatrace metrics, and comprehensive root-cause analysis.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Agile & Incident Lifecycle</h4>
+                  <p>ServiceNow ITIL workflows, Jira sprint planning, and cross-functional team execution.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card: Visual Architecture Breakdown -->
+          <div class="about-card-visual">
+            <div class="about-card-header">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 700;">Core Competencies</h3>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Key Expertise Distribution</span>
+              </div>
+              <span class="card-tag">PRODUCTION READY</span>
+            </div>
+
+            <div class="tech-stack-overview">
+              <div class="tech-domain-bar">
+                <div class="domain-header">
+                  <span class="domain-name">IBM ACE & IIB Integration</span>
+                  <span class="domain-level">95%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="tech-domain-bar">
+                <div class="domain-header">
+                  <span class="domain-name">Java & Spring Boot Backend</span>
+                  <span class="domain-level">90%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="tech-domain-bar">
+                <div class="domain-header">
+                  <span class="domain-name">IBM API Connect (APIC)</span>
+                  <span class="domain-level">88%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="tech-domain-bar">
+                <div class="domain-header">
+                  <span class="domain-name">Splunk Monitoring & Root-Cause Analysis</span>
+                  <span class="domain-level">92%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="tech-domain-bar">
+                <div class="domain-header">
+                  <span class="domain-name">Python & Django</span>
+                  <span class="domain-level">80%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Skills Matrix Section
+         ======================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Technical Stack</div>
+          <h2 class="section-title">Skills & <span class="gradient-text">Ecosystem</span></h2>
+          <p class="section-description">
+            Comprehensive technologies and developer tools utilized across enterprise development environments.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-nav" role="tablist">
+          <button class="filter-btn active" data-filter="all" role="tab">All Technologies</button>
+          <button class="filter-btn" data-filter="integration" role="tab">Enterprise Integration</button>
+          <button class="filter-btn" data-filter="backend" role="tab">Backend & APIs</button>
+          <button class="filter-btn" data-filter="observability" role="tab">Observability & SRE</button>
+          <button class="filter-btn" data-filter="tools" role="tab">Tools & Workflow</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+          <!-- 1. IBM ACE -->
+          <div class="skill-card" data-category="integration">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="skill-type-tag">Core Specialization</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>IBM App Connect (ACE)</h3>
+              <p>Engineering complex message flows, subflows, node configurations, transformations, and error handling.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">Message Flows</span>
+              <span class="skill-tag">Subflows</span>
+              <span class="skill-tag">ESQL</span>
+            </div>
+          </div>
+
+          <!-- 2. IBM APIC -->
+          <div class="skill-card" data-category="integration">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+              </div>
+              <span class="skill-type-tag">API Gateway</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>IBM API Connect (APIC)</h3>
+              <p>Designing, securing, and publishing enterprise APIs with strict rate limits, OAuth policies, and analytics.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">API Governance</span>
+              <span class="skill-tag">Security Policies</span>
+              <span class="skill-tag">Gateways</span>
+            </div>
+          </div>
+
+          <!-- 3. IBM IIB -->
+          <div class="skill-card" data-category="integration">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <span class="skill-type-tag">Enterprise Broker</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>IBM Integration Bus (IIB)</h3>
+              <p>Developing integration topologies, legacy broker maintenance, and seamless migration to modern ACE.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">Integration Bus</span>
+              <span class="skill-tag">Legacy Migration</span>
+              <span class="skill-tag">MQ Queues</span>
+            </div>
+          </div>
+
+          <!-- 4. Java -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </div>
+              <span class="skill-type-tag">Backend</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>Java (11 / 17)</h3>
+              <p>Object-oriented backend development, multithreading, collections framework, Java compute nodes, and streams.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">Core Java</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Multithreading</span>
+            </div>
+          </div>
+
+          <!-- 5. Spring Boot -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span class="skill-type-tag">Framework</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>Spring Boot</h3>
+              <p>Production-grade microservices, REST controllers, Spring Data JPA, dependency injection, and security.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">JPA/Hibernate</span>
+            </div>
+          </div>
+
+          <!-- 6. Splunk -->
+          <div class="skill-card" data-category="observability">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <span class="skill-type-tag">Observability</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>Splunk Log Analysis</h3>
+              <p>Real-time log ingestion, search query processing, alert triggers, dashboard creation, and anomaly detection.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">SPL Queries</span>
+              <span class="skill-tag">Dashboards</span>
+              <span class="skill-tag">Incident Alerting</span>
+            </div>
+          </div>
+
+          <!-- 7. Dynatrace & RCA -->
+          <div class="skill-card" data-category="observability">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 3v18h18"></path>
+                  <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                </svg>
+              </div>
+              <span class="skill-type-tag">APM & Reliability</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>Dynatrace & Root-Cause Analysis</h3>
+              <p>Application performance monitoring, bottleneck diagnostics, garbage collection inspection, and MTTR reduction.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">Dynatrace APM</span>
+              <span class="skill-tag">Trace Analysis</span>
+              <span class="skill-tag">RCA</span>
+            </div>
+          </div>
+
+          <!-- 8. Python & Django -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"></path>
+                  <path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"></path>
+                  <circle cx="8" cy="9" r="1"></circle>
+                  <circle cx="16" cy="15" r="1"></circle>
+                </svg>
+              </div>
+              <span class="skill-type-tag">Scripting & Web</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>Python & Django</h3>
+              <p>Automation scripts, data manipulation, REST frameworks, and certified rapid application development.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">Python 3</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">Automation</span>
+            </div>
+          </div>
+
+          <!-- 9. Tools & Ecosystem -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <span class="skill-type-tag">Workflows</span>
+            </div>
+            <div class="skill-card-content">
+              <h3>ServiceNow, Jira & Git</h3>
+              <p>Agile sprint ceremonies, ITIL incident resolution, version control branching, and peer code reviews.</p>
+            </div>
+            <div class="skill-card-tags">
+              <span class="skill-tag">ServiceNow</span>
+              <span class="skill-tag">Jira</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">VS Code & Eclipse</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Work Experience Timeline Section
+         ======================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Career Journey</div>
+          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+          <p class="section-description">
+            Proven track record of delivering enterprise-grade software solutions with Tata Consultancy Services (TCS).
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Role 1: Integration Developer -->
+          <div class="timeline-item active">
+            <div class="timeline-marker" title="Current Role"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">Integration Developer</h3>
+                  <div class="timeline-company">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    <span>Tata Consultancy Services (TCS)</span>
+                  </div>
+                </div>
+                <div class="timeline-date-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>December 2024 – Present</span>
+                </div>
+              </div>
+
+              <ul class="timeline-responsibilities">
+                <li>
+                  <strong>Design, develop, maintain, and debug</strong> mission-critical integration solutions using 
+                  <strong>IBM App Connect Enterprise (ACE)</strong> and IBM Integration Bus.
+                </li>
+                <li>
+                  <strong>Diagnose complex integration issues</strong> using granular application logs, transaction traces, 
+                  and performance metrics to pinpoint root causes and minimize MTTR.
+                </li>
+                <li>
+                  <strong>Monitor enterprise applications with Splunk</strong> to enable real-time issue detection, proactive 
+                  alerting, and automated troubleshooting workflows.
+                </li>
+                <li>
+                  <strong>Implement enhancements and bug fixes</strong> to message flows, subflows, and reusable integration 
+                  components aligned with evolving business requirements and incident tickets.
+                </li>
+                <li>
+                  <strong>Execute end-to-end testing and validation</strong> across distributed integration touchpoints 
+                  to ensure data integrity, reliable system communication, and zero data leakage.
+                </li>
+                <li>
+                  <strong>Collaborate with cross-functional stakeholders</strong>, delivery leads, and QA to resolve 
+                  high-priority production incidents and author technical knowledge repositories.
+                </li>
+              </ul>
+
+              <div class="timeline-tech-stack">
+                <span class="tech-pill">IBM ACE</span>
+                <span class="tech-pill">IBM APIC</span>
+                <span class="tech-pill">Splunk</span>
+                <span class="tech-pill">Message Flows</span>
+                <span class="tech-pill">ESQL</span>
+                <span class="tech-pill">Dynatrace</span>
+                <span class="tech-pill">ServiceNow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2: Java Developer -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">Java Developer</h3>
+                  <div class="timeline-company">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    <span>Tata Consultancy Services (TCS)</span>
+                  </div>
+                </div>
+                <div class="timeline-date-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>September 2023 – December 2024</span>
+                </div>
+              </div>
+
+              <ul class="timeline-responsibilities">
+                <li>
+                  <strong>Architected and maintained Java backend services</strong> utilizing <strong>Spring Boot</strong> 
+                  and industry-standard design patterns (Factory, Singleton, Repository).
+                </li>
+                <li>
+                  <strong>Investigated client-reported defects</strong>, conducted deep-dive root-cause analyses on application 
+                  stack traces, and delivered stable, regression-free code fixes.
+                </li>
+                <li>
+                  <strong>Partnered with business analysts and clients</strong> to gather specifications, estimate sprint effort, 
+                  and engineer robust functional enhancements.
+                </li>
+                <li>
+                  <strong>Elevated application reliability and performance</strong> through rigorous unit test suites, 
+                  debugging profiles, and active peer code reviews.
+                </li>
+                <li>
+                  <strong>Interfaced closely with frontend and QA teams</strong> to build smooth RESTful contracts and facilitate 
+                  seamless continuous deployment cycles.
+                </li>
+              </ul>
+
+              <div class="timeline-tech-stack">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">Unit Testing</span>
+                <span class="tech-pill">Jira</span>
+                <span class="tech-pill">Git</span>
+                <span class="tech-pill">Eclipse</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Enterprise Solutions & Case Studies
+         ======================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Case Studies</div>
+          <h2 class="section-title">Key Architectural <span class="gradient-text">Solutions</span></h2>
+          <p class="section-description">
+            Representative enterprise integration and backend solutions architected for high resilience and performance.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div>
+              <div class="project-header">
+                <span class="project-category">Enterprise Integration</span>
+                <div class="project-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="project-title">High-Throughput IBM ACE Message Routing Engine</h3>
+              <p class="project-desc">
+                Architected enterprise message flows capable of processing millions of XML/JSON transactions daily, 
+                featuring subflow modularization, dynamic routing, and guaranteed message delivery.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Engineered reusable subflows reducing code duplication by 35%</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Robust exception handling framework with dead-letter queue routing</span>
+                </li>
+              </ul>
+            </div>
+            <div class="project-footer">
+              <div class="project-tech-list">
+                <span class="project-tech-tag">IBM ACE v12</span>
+                <span class="project-tech-tag">ESQL</span>
+                <span class="project-tech-tag">IBM MQ</span>
+                <span class="project-tech-tag">JSON / XML</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div>
+              <div class="project-header">
+                <span class="project-category">Observability & SRE</span>
+                <div class="project-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="project-title">Real-Time Splunk Observability & Incident Detection</h3>
+              <p class="project-desc">
+                Developed telemetry monitoring and automated root-cause alerting pipelines across multiple integration nodes 
+                to detect latency spikes, queue congestions, and flow errors before user impact.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Reduced Mean Time to Resolution (MTTR) by ~40%</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Custom Splunk dashboards with automated threshold notifications</span>
+                </li>
+              </ul>
+            </div>
+            <div class="project-footer">
+              <div class="project-tech-list">
+                <span class="project-tech-tag">Splunk Enterprise</span>
+                <span class="project-tech-tag">Dynatrace</span>
+                <span class="project-tech-tag">Log Analysis</span>
+                <span class="project-tech-tag">RCA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div>
+              <div class="project-header">
+                <span class="project-category">Backend & APIs</span>
+                <div class="project-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="project-title">Secure Banking Integration Gateway (APIC & Spring)</h3>
+              <p class="project-desc">
+                Constructed resilient Spring Boot microservices interfacing with IBM API Connect, enforcing strict OAuth2 
+                security policies, header validation, rate-limiting, and auditable payload logging.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Compliant with strict enterprise security & zero-trust API standards</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Implemented comprehensive JUnit test coverage across endpoints</span>
+                </li>
+              </ul>
+            </div>
+            <div class="project-footer">
+              <div class="project-tech-list">
+                <span class="project-tech-tag">Java 17</span>
+                <span class="project-tech-tag">Spring Boot</span>
+                <span class="project-tech-tag">IBM APIC</span>
+                <span class="project-tech-tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Education & Certifications Section
+         ======================================================================== -->
+    <section class="section" id="credentials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Academic & Credentials</div>
+          <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-description">
+            Academic degree and specialized industry trainings underpinning technical engineering mastery.
+          </p>
+        </div>
+
+        <div class="credentials-grid">
+          <!-- Education Column -->
+          <div>
+            <h3 class="credential-column-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>Education</span>
+            </h3>
+
+            <div class="edu-card">
+              <div>
+                <h4 class="edu-degree">Bachelor's Degree in Computer Science and Engineering</h4>
+                <div class="edu-college">Mother Theresa Institute of Engineering and Technology</div>
+                <div class="edu-location">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Palamaner, Andhra Pradesh, India</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                  Rigorous computer science curriculum covering data structures, object-oriented programming, database management 
+                  systems, computer networks, distributed operating systems, and software engineering methodologies.
+                </p>
+              </div>
+
+              <div class="edu-footer">
+                <span>Degree: B.Tech CSE</span>
+                <span>Graduated: April 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div>
+            <h3 class="credential-column-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+              <span>Certifications & Training</span>
+            </h3>
+
+            <div class="certifications-list">
+              <!-- Cert 1 -->
+              <div class="cert-card">
+                <div class="cert-info">
+                  <div class="cert-badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="cert-name">IBM API Connect (APIC)</h4>
+                    <span class="cert-issuer">Enterprise API Management & Gateway Governance</span>
+                  </div>
+                </div>
+                <span class="cert-status">Certified</span>
+              </div>
+
+              <!-- Cert 2 -->
+              <div class="cert-card">
+                <div class="cert-info">
+                  <div class="cert-badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="cert-name">Java & Spring Boot</h4>
+                    <span class="cert-issuer">Enterprise Backend & Microservices Architecture</span>
+                  </div>
+                </div>
+                <span class="cert-status">Certified</span>
+              </div>
+
+              <!-- Cert 3 -->
+              <div class="cert-card">
+                <div class="cert-info">
+                  <div class="cert-badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="cert-name">Python & Django Development</h4>
+                    <span class="cert-issuer">Advanced Scripting, Data Handlers & Web Systems</span>
+                  </div>
+                </div>
+                <span class="cert-status">Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Contact Section
+         ======================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Get In Touch</div>
+          <h2 class="section-title">Let's Discuss <span class="gradient-text">Opportunities</span></h2>
+          <p class="section-description">
+            Looking for an experienced Integration Developer or Java Software Engineer? Send a direct message or connect via email.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details Cards -->
+          <div class="contact-info-wrap">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Email Address</div>
+                <div class="contact-value">
+                  <a href="mailto:jeevankothapallie143@gmail.com">jeevankothapallie143@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Phone & WhatsApp</div>
+                <div class="contact-value">
+                  <a href="tel:+917671931861">+91 7671931861</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Current Location</div>
+                <div class="contact-value">Bangalore, Karnataka, India</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Current Status</div>
+                <div class="contact-value" style="color: var(--accent-emerald);">Actively Open for Opportunities</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-wrap">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name *</label>
+                <input type="text" id="name" class="form-control" placeholder="e.g. Alex Henderson" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email *</label>
+                <input type="email" id="email" class="form-control" placeholder="e.g. alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" class="form-control" placeholder="e.g. Integration Specialist Role / Project Consultation">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" class="form-control" placeholder="Hi Jeevan, I would like to discuss an opportunity regarding..." required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Jeevan<span class="brand-accent">.dev</span></h3>
+          <p>Software Engineer & Enterprise Integration Specialist • IBM ACE, APIC & Java Spring Boot</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#hero" class="footer-link">Home</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#skills" class="footer-link">Skills</a>
+          <a href="#experience" class="footer-link">Experience</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#contact" class="footer-link">Contact</a>
+          <a href="Resume/JeevanAC.docx" download="Jeevan_Reddy_K_Resume.docx" class="footer-link" style="color: var(--accent-cyan);">Download Resume</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jeevan Reddy K. All rights reserved. Engineered for performance and accessibility.</p>
+        
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Scroll to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
